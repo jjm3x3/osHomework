@@ -2,12 +2,16 @@
 
 %\renewcommand{\theenumi}{\alph{enumi}}
 \usepackage{enumerate}
+\usepackage{fancyhdr}
+
+\pagestyle{fancy}
+\rhead{Jacob Meixner\\Hw \#1}
 
 \begin{document}
 \begin{enumerate}[a)]
 	\item \hfill \\
-	This program acomplishes printing out twenty '.'s and twenty '0's likely alternating. Also incrmentaly increcing myglobal from likely 0 to 21. The reason the program does this is because each loop in each respective thread goes from 0 to 20 and everytime it prints either a '.' or a '0' then flushes the output and then will sleep for 1 second likely keeping each thread in sync reative to one another hence the expected alternating output.
+	This program accomplishes printing out twenty '.'s and twenty '0's likely alternating. Also incrementally increasing myglobal from likely 0 to 21. The reason the program does this is because each loop in each respective thread goes from 0 to 20 and every time it prints either a '.' or a '0' then flushes the output and then will sleep for 1 second likely keeping each thread in sync relative to one another hence the expected alternating output. Also the reason you don't see myglobal increase from 0 to 41 is because since the first thread sleeps it does not get a chance to update the value for the main thread to use instead they both attempt to write the same value into my global keeping down to just 21.
 	\item \hfill \\
-		some answer to number b:
+		This output is not really what I expected because there are a couple of places where there are two consecutive .. or 00. And I would expect that even though there are two threads that are running which we don't have "control" over the sleep(1) that they both have to go through I would expect to keep them relatively in check
 \end{enumerate}
 \end{document}
